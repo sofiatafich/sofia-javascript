@@ -54,8 +54,34 @@
     }
 
     console.log(makeSofia("Sofia", "Lorena", "Tafich"));
-
     console.log(makeSofia("Robert", "\"Beto\"", "O'Rourke"));
+
+    // Make a name with middle initial
+    function makeBetterName(firstName, middleName, lastName) {
+      if (middleName.length === 1) {
+        middleName = middleName + ".";
+        let fullName = firstName + " " + middleName + " " + lastName;
+        return fullName;
+    } else {
+        let fullName = firstName + " " + middleName + " " + lastName;
+        return fullName;
+      }
+    }
+    console.log(makeBetterName("Jesus", "R", "Tafich"));
+    console.log(makeBetterName("David", "Jesus", "Tafich"));
+
+    function gameResult(home, away) {
+      if (home > away) {
+        return "The home team won."
+      } else if (home === away) {
+        return "They tied.";
+      } else {
+        if (home < away)
+        return "The away team won."
+      }
+    }
+    console.log(gameResult(4, 5))
+    console.log(gameResult(8, 8))
     </script>
 </body>
 </html>
